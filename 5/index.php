@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   }
   if ($errors['email']) {
     setcookie('email_error', '', 100000);
-    $messages[] = '<div class="error">Заполните имейл или у него неверный формат</div>';
+    $messages[] = '<div class="error">Заполните email или у него неверный формат</div>';
     $error=TRUE;
   }
   if ($errors['year']) {
