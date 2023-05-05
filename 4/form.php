@@ -41,7 +41,7 @@ if (!empty($messages)) {
 ?>
 <body>
     <div class="main">
-    <h1>Форма</h1>
+    <h1>ФОРМА</h1>
     
     <form action="index.php" method="POST">
             <div class="pas <?php if ($errors['name']) {print 'error';} ?>" >
