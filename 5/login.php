@@ -61,7 +61,7 @@ else {
     }
   }
   if($error==TRUE){
-    print('Неправильные логин или пароль? <br> Создайте нового <a href="index.php">пользователя</a> или <a href="login.php">попробовать войти снова</a> ');
+    print('Неправильные логин или пароль? <br> Создайте нового <a href="index.php">пользователя</a> или <a href="login.php">попробуйте войти снова</a> ');
     session_destroy();
     exit();
   }
