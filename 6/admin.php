@@ -13,6 +13,7 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
   catch(PDOException $e){
     print('Error: '.$e->getMessage());
   }
+  
   if (empty($_SERVER['PHP_AUTH_USER']) ||
       empty($_SERVER['PHP_AUTH_PW']) ||
       $_SERVER['PHP_AUTH_USER'] != 'admin' ||
@@ -22,6 +23,7 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
     print('<h1>401 Требуется авторизация</h1>');
     exit();
   }
+  
   if(!empty($_COOKIE['del'])){
     echo 'Пользователь '.$_COOKIE['del_user'].' был удалён <br>';
     setcookie('del','');
@@ -32,6 +34,7 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
   $pwrs=array();
   $pwr_def=array('inv','walk','fly');
   $pwrs_count=array();
+  
   try{
     $get=$db->prepare("select * from form");
     $get->execute();
